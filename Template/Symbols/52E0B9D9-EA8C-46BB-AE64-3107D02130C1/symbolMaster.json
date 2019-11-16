@@ -9,7 +9,7 @@
     "red": 1
   },
   "booleanOperation": -1,
-  "changeIdentifier": 588,
+  "changeIdentifier": 616,
   "clippingMaskMode": 0,
   "do_objectID": "52E0B9D9-EA8C-46BB-AE64-3107D02130C1",
   "exportOptions": {
@@ -53,8 +53,8 @@
   "layerListExpandedType": 0,
   "layers": [
     {
-      "class": "text",
-      "id": "0E67D2B9-E778-4F0D-B7F5-CA194B164E9F"
+      "class": "group",
+      "id": "03E3D8A1-27CC-45E7-A021-48BAD2754F78"
     }
   ],
   "maintainScrollPosition": false,
