@@ -45,7 +45,7 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - [ ] Tailwind Examples: Grids (? not yet sure if feasible)
 - [ ] Tailwind Examples: Navigation
 
-### Installation
+## Installation
 
 1. Download the latest version.
 2. Open in Sketch.
