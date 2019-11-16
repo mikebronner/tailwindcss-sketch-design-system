@@ -39,14 +39,17 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - [X] Basic Text Symbols
 - [X] Spacing & Sizing Symbols
 - [X] Card Symbols
-- [ ] Tailwind Examples: Alerts
-- [ ] Tailwind Examples: Buttons
-- [ ] Tailwind Examples: Cards
-- [ ] Tailwind Examples: Grids (? not yet sure if feasible)
-- [ ] Tailwind Examples: Navigation
-- [ ] Tailwind UI Examples: Email Inbox
-- [ ] Tailwind UI Examples: Kanban Board
-- [ ] Tailwind UI Examples: Pricing Page
+
+### Examples
+
+- [ ] Alerts
+- [ ] Buttons
+- [ ] Cards
+- [ ] Grids (? not yet sure if feasible)
+- [ ] Navigation
+- [ ] Email Inbox
+- [ ] Kanban Board
+- [ ] Pricing Page
 
 ## Installation
 
