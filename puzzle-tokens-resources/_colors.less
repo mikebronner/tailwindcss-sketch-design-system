@@ -1,0 +1,44 @@
+@import "./tailwind-variables.less";
+
+@colors: {
+    Gray: gray;
+    Red: red;
+    Orange: orange;
+    Yellow: yellow;
+    Green: green;
+    Teal: teal;
+    Blue: blue;
+    Indigo: indigo;
+    Purple: purple;
+    Pink: pink;
+};
+
+@variants:
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+;
+
+.Colors .White {
+    background-color: white;
+}
+.Colors .Black {
+    background-color: black;
+}
+.Colors .Transparent {
+    background-color: transparent;
+}
+
+each(@colors, #(@colorValue, @colorKey) {
+    each(@variants, .(@variant) {
+        .Colors .@{colorKey} .@{variant} {
+            background-color: ~"@{colors-@{colorValue}-@{variant}}";
+        }
+    });
+});

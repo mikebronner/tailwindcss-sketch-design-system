@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "scripts": {
+        "export": "tailwindcss-export-config --config=tailwind.config.js --destination=src/tailwind-variables --format=less"
+    },
+    "devDependencies": {
+        "tailwindcss": "^1.1.3",
+        "tailwindcss-export-config": "^2.0.2"
+    }
+}

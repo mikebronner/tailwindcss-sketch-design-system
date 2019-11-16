@@ -1,0 +1,59 @@
+@import "./tailwind-variables.less";
+
+@styles: {
+    Solid: solid;
+    Dashed: dashed;
+    Dotted: dotted;
+    Double: double;
+};
+
+@widths:
+    1,
+    2,
+    4,
+    8
+;
+
+@colors: {
+    Gray: gray;
+    Red: red;
+    Orange: orange;
+    Yellow: yellow;
+    Green: green;
+    Teal: teal;
+    Blue: blue;
+    Indigo: indigo;
+    Purple: purple;
+    Pink: pink;
+};
+
+@variants:
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+;
+
+.Borders .None {
+    border-width: 0;
+    border-color: transparent;
+}
+
+each(@styles, #(@styleValue, @styleName) {
+    each(@widths, .(@width) {
+        each(@colors, #(@colorValue, @colorKey) {
+            each(@variants, .(@variant) {
+                .Borders .@{styleName} .@{width} .@{colorKey} .@{variant} {
+                    border-width: ~"@{width}"px;
+                    border-style: @styleValue;
+                    border-color: ~"@{colors-@{colorValue}-@{variant}}";
+                }
+            });
+        });
+    });
+});
