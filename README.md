@@ -4,7 +4,7 @@ An atomic design system for TailwindCSS implemented in Sketch.
 
 ## Requirements
 
-- Sketch 60+
+- Sketch 60 (or newer)
 
 ## (Planned) Features
 
@@ -14,14 +14,14 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - Font Styles
   - [X] Font Family
   - [X] Font Size
-  - [ ] Font Styles
-  - [ ] Font Weight
-  - [ ] Letter Spacing
-  - [ ] Line Height
-  - [ ] Text Align
+  - [ ] Font Styles (? not yet sure if feasible)
+  - [ ] Font Weight (? not yet sure if feasible)
+  - [ ] Letter Spacing (? not yet sure if feasible)
+  - [ ] Line Height (? not yet sure if feasible)
+  - [ ] Text Align (? not yet sure if feasible)
   - [X] Text Color
-  - [ ] Text Decoration
-  - [ ] Text Transform
+  - [ ] Text Decoration (? not yet sure if feasible)
+  - [ ] Text Transform (? not yet sure if feasible)
 - [X] Box Shadow
 - [ ] Opacity (? not yet sure if feasible)
 - Border Styles
