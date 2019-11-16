@@ -44,6 +44,9 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - [ ] Tailwind Examples: Cards
 - [ ] Tailwind Examples: Grids (? not yet sure if feasible)
 - [ ] Tailwind Examples: Navigation
+- [ ] Tailwind UI Examples: Email Inbox
+- [ ] Tailwind UI Examples: Kanban Board
+- [ ] Tailwind UI Examples: Pricing Page
 
 ## Installation
 
