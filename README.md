@@ -5,6 +5,9 @@ An atomic design system for TailwindCSS implemented in Sketch.
 ## Requirements
 
 - Sketch 60 (or newer)
+- SF Pro Text font installed.
+- Menlo font installed.
+- Georgia font installed.
 
 ## (Planned) Features
 
@@ -14,8 +17,8 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - Font Styles
   - [X] Font Family
   - [X] Font Size
-  - [ ] Font Styles (? not yet sure if feasible)
-  - [ ] Font Weight (? not yet sure if feasible)
+  - [X] Font Styles
+  - [X] Font Weight
   - [ ] Letter Spacing (? not yet sure if feasible)
   - [ ] Line Height (? not yet sure if feasible)
   - [ ] Text Align (? not yet sure if feasible)
@@ -50,6 +53,22 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - [ ] Email Inbox
 - [ ] Kanban Board
 - [ ] Pricing Page
+
+## Current Limitations
+
+- Not all font weights (100 through 900) are represented. Instead, only the
+    available weights the for the respctive fonts are created.
+
+### Issues
+
+The following are issues we are working on resolving. Until then, they are
+    ommitted from the template in order to avoid confusion and keep things
+    simple.
+
+- Italics are currently not rendering correctly (instead rendering as Normal).
+- Double borders render as single borders.
+- Dotted borders render as single borders.
+- Dashed borders render as single borders.
 
 ## Installation
 

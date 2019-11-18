@@ -1,0 +1,91 @@
+@import "./_tailwind-variables.less";
+
+@colors: {
+    Gray: gray;
+    Red: red;
+    Orange: orange;
+    Yellow: yellow;
+    Green: green;
+    Teal: teal;
+    Blue: blue;
+    Indigo: indigo;
+    Purple: purple;
+    Pink: pink;
+};
+
+@variants:
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+;
+
+@sizes:
+    xs,
+    sm,
+    base,
+    lg,
+    xl,
+    2xl,
+    3xl,
+    4xl,
+    5xl,
+    6xl
+;
+
+@weights-mono:
+    normal,
+    bold
+;
+
+@weights-sans:
+    light,
+    normal,
+    medium,
+    semibold,
+    bold
+;
+
+@weights-serif:
+    normal,
+    bold
+;
+
+@styles:
+    // italic,
+    normal
+;
+
+@families: {
+    sans: "SF Pro Text";
+    serif: Georgia;
+    mono: Menlo;
+};
+
+each(@families, .(@fontName, @family) {
+    each(@sizes, .(@size) {
+        @fontSize: "fontSize-@{size}";
+        @fontSizePx: 16px * @@fontSize;
+        @weights: "weights-@{family}";
+        each(@@weights, .(@weight) {
+            @weightNumber: ~"@{fontWeight-@{weight}}";
+            each(@styles, .(@style) {
+                .Fonts .@{family} .@{fontSizePx}__-__@{size} .@{weightNumber}__-__@{weight} .@{style} {
+                    font-family: @fontName;
+                    font-size: @fontSizePx;
+                    font-weight: @weightNumber;
+                    font-style: @style;
+                    color: black;
+                    text-align: left;
+                    vertical-align: top;
+                    line-height: 1;
+                }
+            });
+        });
+    });
+});
