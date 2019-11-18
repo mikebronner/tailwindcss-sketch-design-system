@@ -5,9 +5,10 @@ An atomic design system for TailwindCSS implemented in Sketch.
 ## Requirements
 
 - Sketch 60 (or newer)
-- SF Pro Text font installed.
-- Menlo font installed.
-- Georgia font installed.
+- [SF Pro fonts](https://developer.apple.com/fonts/) installed. Please read the
+    license agreement. They are intended for development and mockup use only.
+- Menlo font (should be installed in macOS).
+- Georgia font (should be installed in macOS).
 
 ## (Planned) Features
 
