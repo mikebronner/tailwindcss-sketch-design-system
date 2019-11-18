@@ -1,5 +1,7 @@
 @import "./_tailwind-variables.less";
 
+@rootFontSize: 16px;
+
 @colors: {
     Gray: gray;
     Red: red;
@@ -59,9 +61,53 @@
     700,
 ;
 
+@lineheights: {
+    none: 1;
+    tight: 1.25;
+    snug: 1.375;
+    normal: 1.5;
+    relaxed: 1.625;
+    loose: 2;
+};
+
+@letterSpacings: {
+    tighter: -0.05em;
+    tight: -0.025em;
+    normal: 0;
+    wide: 0.025em;
+    wider: 0.05em;
+    widest: 0.1em;
+};
+
 @styles:
     italic,
     normal
+;
+
+@decorations:
+    underline,
+    line-through,
+    none,
+;
+
+@transformations:
+    uppercase,
+    lowercase,
+    capitalize,
+    none,
+;
+
+@horizontalAligns:
+    left,
+    center,
+    right,
+    justify,
+;
+
+@verticalAligns:
+    top,
+    middle,
+    bottom,
 ;
 
 @families: {
@@ -73,20 +119,37 @@
 each(@families, .(@fontName, @family) {
     each(@sizes, .(@size) {
         @fontSize: "fontSize-@{size}";
-        @fontSizePx: 16px * @@fontSize;
+        @fontSizePx: @rootFontSize * @@fontSize;
         @weights: "weights-@{family}";
         each(@@weights, .(@weight) {
             each(@styles, .(@style) {
-                .@{family} .@{fontSizePx}__-__@{size} .@{style} .@{weight} {
-                    font-family: @fontName;
-                    font-size: @fontSizePx;
-                    font-weight: @weight;
-                    font-style: @style;
-                    color: black;
-                    text-align: left;
-                    vertical-align: top;
-                    line-height: 1;
-                }
+                // each(@decorations, .(@decoration) {
+                    // each(@transformations, .(@transformation) {
+                        each(@verticalAligns, .(@verticalAlign) {
+                            each(@horizontalAligns, .(@horizontalAlign) {
+                                each(@lineheights, .(@lineheight, @lineheightName) {
+                                    // each(@letterSpacings, .(@letterSpacing, @letterSpacingName) {
+                                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{verticalAlign} .@{horizontalAlign} .@{style} .@{weight} {
+                                            font-family: @fontName;
+                                            font-size: @fontSizePx;
+                                            font-weight: @weight;
+                                            font-style: @style;
+                                            color: black;
+                                            text-align: left;
+                                            vertical-align: top;
+                                            line-height: @lineheight;
+                                            // letter-spacing: @letterSpacing;
+                                            // text-decoration: @decoration;
+                                            // text-transform: @transformation;
+                                            vertical-align: @verticalAlign;
+                                            text-align: @horizontalAlign;
+                                        }
+                                    // });
+                                });
+                            });
+                        });
+                    // });
+                // });
             });
         });
     });

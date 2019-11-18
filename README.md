@@ -13,6 +13,7 @@ An atomic design system for TailwindCSS implemented in Sketch.
 ## (Planned) Features
 
 ### Styles
+Items marked as blocked are not yet implemented in the style generator plugin.
 
 - [X] Color Styles
 - Font Styles
@@ -20,21 +21,21 @@ An atomic design system for TailwindCSS implemented in Sketch.
   - [X] Font Sizes
   - [X] Font Styles
   - [X] Font Weights
-  - [ ] Letter Spacing (? not yet sure if feasible)
-  - [ ] Line Height (? not yet sure if feasible)
-  - [ ] Text Align (? not yet sure if feasible)
+  - [ ] Letter Spacing (blocked)
+  - [X] Line Height
+  - [X] Text Align
   - [X] Text Color
-  - [ ] Text Decoration (? not yet sure if feasible)
-  - [ ] Text Transform (? not yet sure if feasible)
+  - [ ] Text Decoration (blocked)
+  - [ ] Text Transform (blocked)
 - [X] Box Shadow
-- [ ] Opacity (? not yet sure if feasible)
+- [ ] Opacity (blocked)
 - Border Styles
   - [X] Border Color
   - Border Styles
     - [X] Solid
     - [X] Double
-    - [ ] Dashed
-    - [ ] Dotted
+    - [ ] Dashed (blocked)
+    - [ ] Dotted (blocked)
   - [X] Border Width
 - [X] Border Radius (implemented as cards)
 
