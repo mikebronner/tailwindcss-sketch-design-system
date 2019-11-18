@@ -37,14 +37,14 @@ Items marked as blocked are not yet implemented in the style generator plugin.
     - [ ] Dashed (blocked)
     - [ ] Dotted (blocked)
   - [X] Border Width
-- [X] Border Radius (implemented as cards)
+- [ ] Border Radius (blocked, implemented as card symbols)
 
 ### Symbols
 
 - Spacing & Sizing Symbols (to be used as guides)
   - [X] Container
   - [X] Paddings, Margins, Widths, Heights
-  - [ ] Max-Width
+  - [X] Max-Width
 - [X] Basic Text Symbols
 - [X] Spacing & Sizing Symbols
 - [X] Card Symbols
@@ -75,6 +75,7 @@ The following are issues we are working on resolving. Until then, they are
 - Double borders render as single borders.
 - Dotted borders render as single borders.
 - Dashed borders render as single borders.
+- 100% border radii don't scale in Sketch 60.
 
 ## Installation
 

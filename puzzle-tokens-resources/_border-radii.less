@@ -1,0 +1,68 @@
+@import "./_tailwind-variables.less";
+
+@rootFontSize: 16px;
+
+@radii:
+    sm,
+    default,
+    lg,
+    full,
+;
+
+.Border-Radii none {
+    border-radius: 0 0 0 0;
+}
+
+each(@radii, .(@size) {
+    @radius: "borderRadius-@{size}";
+    @radiusPx: @rootFontSize * @@radius;
+
+    .Border-Radii .@{size} top-left {
+        border-radius: @radiusPx 0 0 0;
+    }
+    .Border-Radii .@{size} top-right {
+        border-radius: 0 @radiusPx 0 0;
+    }
+    .Border-Radii .@{size} bottom-right {
+        border-radius: 0 0 @radiusPx 0;
+    }
+    .Border-Radii .@{size} bottom-left {
+        border-radius: 0 0 0 @radiusPx;
+    }
+
+    .Border-Radii .@{size} top-left__top-right {
+        border-radius: @radiusPx @radiusPx 0 0;
+    }
+    .Border-Radii .@{size} top-right__bottom-right {
+        border-radius: 0 @radiusPx @radiusPx 0;
+    }
+    .Border-Radii .@{size} bottom-right__bottom-left {
+        border-radius: 0 0 @radiusPx @radiusPx;
+    }
+    .Border-Radii .@{size} top-left__bottom-left {
+        border-radius: @radiusPx 0 0 @radiusPx;
+    }
+    .Border-Radii .@{size} top-right__bottom-left {
+        border-radius: 0 @radiusPx 0 @radiusPx;
+    }
+    .Border-Radii .@{size} top-left__bottom-right {
+        border-radius: @radiusPx 0 @radiusPx 0;
+    }
+
+    .Border-Radii .@{size} top-left__top-right__bottom-right {
+        border-radius: @radiusPx @radiusPx @radiusPx 0;
+    }
+    .Border-Radii .@{size} top-left__top-right__bottom-left {
+        border-radius: @radiusPx @radiusPx 0 @radiusPx;
+    }
+    .Border-Radii .@{size} top-left__bottom-right__bottom-left {
+        border-radius: @radiusPx 0 @radiusPx @radiusPx;
+    }
+    .Border-Radii .@{size} top-right__bottom-right__none {
+        border-radius: 0 @radiusPx @radiusPx @radiusPx;
+    }
+
+    .Border-Radii .@{size} .all {
+        border-radius: @radiusPx @radiusPx @radiusPx @radiusPx;
+    }
+});
