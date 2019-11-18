@@ -2,14 +2,19 @@
 
 @styles: {
     Solid: solid;
-    // Dashed: dashed;
-    // Dotted: dotted;
-    // Double: double;
+    Dashed: dashed;
+    Dotted: dotted;
+    Double: double;
 };
 
 @widths:
     1,
     2,
+    4,
+    8
+;
+
+@doubleWidths:
     4,
     8
 ;
@@ -52,25 +57,31 @@ each(@widths, .(@width) {
                 border-color: ~"@{colors-@{colorValue}-@{variant}}";
                 border-position: inside;
             }
-    
-            // @outerWidth: ((@width - (@width / (@width / 2))) / (@width / 4));
-            // @gapWidth: (@outerWidth + (@width / 4));
-            // @innerWidth: (@outerWidth + @gapWidth);
-            // .Borders .Double .@{width} .@{colorKey} .@{variant} {
-            //     border-width: unit(@innerWidth, px);
-            //     border-color: ~"@{colors-@{colorValue}-@{variant}}";
-            //     border-position: inside;
-            // }
-            // .Borders .Double .@{width} .@{colorKey} .@{variant} {
-            //     border-width: unit(@gapWidth, px);
-            //     border-color: white;
-            //     border-position: inside;
-            // }
-            // .Borders .Double .@{width} .@{colorKey} .@{variant} {
-            //     border-width: unit(@outerWidth, px);
-            //     border-color: ~"@{colors-@{colorValue}-@{variant}}";
-            //     border-position: inside;
-            // }
+        });
+    });
+});
+
+each(@doubleWidths, .(@width) {
+    each(@colors, #(@colorValue, @colorKey) {
+        each(@variants, .(@variant) {
+            @outerWidth: ((@width - (@width / (@width / 2))) / (@width / 4));
+            @gapWidth: (@outerWidth + (@width / 4));
+            @innerWidth: (@outerWidth + @gapWidth);
+            .Borders .Double .@{width} .@{colorKey} .@{variant} {
+                border-width: unit(@innerWidth, px);
+                border-color: ~"@{colors-@{colorValue}-@{variant}}";
+                border-position: inside;
+            }
+            .Borders .Double .@{width} .@{colorKey} .@{variant} {
+                border-width: unit(@gapWidth, px);
+                border-color: white;
+                border-position: inside;
+            }
+            .Borders .Double .@{width} .@{colorKey} .@{variant} {
+                border-width: unit(@outerWidth, px);
+                border-color: ~"@{colors-@{colorValue}-@{variant}}";
+                border-position: inside;
+            }
         });
     });
 });

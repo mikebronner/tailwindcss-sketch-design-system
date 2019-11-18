@@ -18,7 +18,7 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - Font Styles
   - [X] Font Family
   - [X] Font Sizes
-  - [ ] Font Styles (blocked by styles generator)
+  - [X] Font Styles
   - [X] Font Weights
   - [ ] Letter Spacing (? not yet sure if feasible)
   - [ ] Line Height (? not yet sure if feasible)
@@ -30,9 +30,13 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - [ ] Opacity (? not yet sure if feasible)
 - Border Styles
   - [X] Border Color
-  - [X] Border Styles
+  - Border Styles
+    - [X] Solid
+    - [X] Double
+    - [ ] Dashed
+    - [ ] Dotted
   - [X] Border Width
-  - [X] Border Radius
+- [X] Border Radius (implemented as cards)
 
 ### Symbols
 

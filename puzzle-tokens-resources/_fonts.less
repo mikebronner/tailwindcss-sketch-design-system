@@ -39,43 +39,33 @@
 ;
 
 @weights-mono:
-    normal,
-    bold
+    400,
+    700,
 ;
 
 @weights-sans:
-    light,
-    normal,
-    medium,
-    semibold,
-    bold
+    100,
+    200,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
 ;
 
 @weights-serif:
-    normal,
-    bold
+    400,
+    700,
 ;
 
-@weights: {
-    thin: 100;
-    ultralight: 200;
-    light: 300;
-    regular: 400;
-    medium: 500;
-    semibold: 600;
-    bold: 700;
-    extrabold: 800;
-    heavy: 900;
-};
-
 @styles:
-    // italic,
+    italic,
     normal
 ;
 
 @families: {
-    // sans: "SF Pro Text";
-    sans: "Helvetica Neue";
+    sans: "SF Pro Display";
     serif: Georgia;
     mono: Menlo;
 };
@@ -84,21 +74,20 @@ each(@families, .(@fontName, @family) {
     each(@sizes, .(@size) {
         @fontSize: "fontSize-@{size}";
         @fontSizePx: 16px * @@fontSize;
-        // @weights: "weights-@{family}";
-        each(@weights, .(@weightNumber, @weight) {
-            // @weightNumber: ~"@{fontWeight-@{weight}}";
-            // each(@styles, .(@style) {
-                .Fonts .@{family} .@{fontSizePx}__-__@{size} .@{weightNumber} {
+        @weights: "weights-@{family}";
+        each(@@weights, .(@weight) {
+            each(@styles, .(@style) {
+                .@{family} .@{fontSizePx}__-__@{size} .@{style} .@{weight} {
                     font-family: @fontName;
                     font-size: @fontSizePx;
-                    font-weight: @weightNumber;
-                    // font-style: @style;
+                    font-weight: @weight;
+                    font-style: @style;
                     color: black;
                     text-align: left;
                     vertical-align: top;
                     line-height: 1;
                 }
-            // });
+            });
         });
     });
 });
