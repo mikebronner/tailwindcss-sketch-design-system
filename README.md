@@ -18,7 +18,7 @@ An atomic design system for TailwindCSS implemented in Sketch.
 - Font Styles
   - [X] Font Family
   - [X] Font Sizes
-  - [ ] Font Styles
+  - [ ] Font Styles (blocked by styles generator)
   - [X] Font Weights
   - [ ] Letter Spacing (? not yet sure if feasible)
   - [ ] Line Height (? not yet sure if feasible)
