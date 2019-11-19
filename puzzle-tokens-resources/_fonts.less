@@ -93,7 +93,6 @@
 @transformations:
     uppercase,
     lowercase,
-    capitalize,
     none,
 ;
 
@@ -124,23 +123,21 @@ each(@families, .(@fontName, @family) {
         each(@@weights, .(@weight) {
             each(@styles, .(@style) {
                 // each(@decorations, .(@decoration) {
-                    // each(@transformations, .(@transformation) {
+                    each(@transformations, .(@transformation) {
                         each(@verticalAligns, .(@verticalAlign) {
                             each(@horizontalAligns, .(@horizontalAlign) {
                                 each(@lineheights, .(@lineheight, @lineheightName) {
                                     // each(@letterSpacings, .(@letterSpacing, @letterSpacingName) {
-                                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{verticalAlign} .@{horizontalAlign} .@{style} .@{weight} {
+                                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{transformation} .@{verticalAlign} .@{horizontalAlign} .@{style} .@{weight} {
                                             font-family: @fontName;
                                             font-size: @fontSizePx;
                                             font-weight: @weight;
                                             font-style: @style;
                                             color: black;
-                                            text-align: left;
-                                            vertical-align: top;
                                             line-height: @lineheight;
                                             // letter-spacing: @letterSpacing;
                                             // text-decoration: @decoration;
-                                            // text-transform: @transformation;
+                                            text-transform: @transformation;
                                             vertical-align: @verticalAlign;
                                             text-align: @horizontalAlign;
                                         }
@@ -148,7 +145,7 @@ each(@families, .(@fontName, @family) {
                                 });
                             });
                         });
-                    // });
+                    });
                 // });
             });
         });

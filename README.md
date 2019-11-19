@@ -26,7 +26,7 @@ Items marked as blocked are not yet implemented in the style generator plugin.
   - [X] Text Align
   - [X] Text Color
   - [ ] Text Decoration (blocked)
-  - [ ] Text Transform (blocked)
+  - [X] Text Transform
 - [X] Box Shadow
 - [ ] Opacity (blocked)
 - Border Styles
