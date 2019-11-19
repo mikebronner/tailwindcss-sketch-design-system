@@ -21,12 +21,12 @@ Items marked as blocked are not yet implemented in the style generator plugin.
   - [X] Font Sizes
   - [X] Font Styles
   - [X] Font Weights
-  - [ ] Letter Spacing (blocked)
+  - [ ] Letter Spacing (ommitted, should be set when creating symbols)
   - [X] Line Height
-  - [X] Text Align
-  - [X] Text Color
-  - [ ] Text Decoration (blocked)
-  - [X] Text Transform
+  - [ ] Text Align (ommitted, should be set when creating symbols)
+  - [ ] Text Color (ommitted, should be achieved in symbols using masks)
+  - [ ] Text Decoration (ommitted, should be set when creating symbols)
+  - [ ] Text Transform (ommitted, should be set when creating symbols)
 - [X] Box Shadow
 - [ ] Opacity (blocked)
 - Border Styles
@@ -45,9 +45,10 @@ Items marked as blocked are not yet implemented in the style generator plugin.
   - [X] Container
   - [X] Paddings, Margins, Widths, Heights
   - [X] Max-Width
-- [X] Basic Text Symbols
-- [X] Spacing & Sizing Symbols
-- [X] Card Symbols
+- [ ] Basic Text Symbols
+- [X] Spacings & Sizings
+- [X] Cards
+- [X] Browser Window
 
 ### Examples
 

@@ -2,19 +2,6 @@
 
 @rootFontSize: 16px;
 
-@colors: {
-    Gray: gray;
-    Red: red;
-    Orange: orange;
-    Yellow: yellow;
-    Green: green;
-    Teal: teal;
-    Blue: blue;
-    Indigo: indigo;
-    Purple: purple;
-    Pink: pink;
-};
-
 @variants:
     100,
     200,
@@ -70,43 +57,9 @@
     loose: 2;
 };
 
-@letterSpacings: {
-    tighter: -0.05em;
-    tight: -0.025em;
-    normal: 0;
-    wide: 0.025em;
-    wider: 0.05em;
-    widest: 0.1em;
-};
-
 @styles:
     italic,
     normal
-;
-
-@decorations:
-    underline,
-    line-through,
-    none,
-;
-
-@transformations:
-    uppercase,
-    lowercase,
-    none,
-;
-
-@horizontalAligns:
-    left,
-    center,
-    right,
-    justify,
-;
-
-@verticalAligns:
-    top,
-    middle,
-    bottom,
 ;
 
 @families: {
@@ -122,31 +75,16 @@ each(@families, .(@fontName, @family) {
         @weights: "weights-@{family}";
         each(@@weights, .(@weight) {
             each(@styles, .(@style) {
-                // each(@decorations, .(@decoration) {
-                    each(@transformations, .(@transformation) {
-                        each(@verticalAligns, .(@verticalAlign) {
-                            each(@horizontalAligns, .(@horizontalAlign) {
-                                each(@lineheights, .(@lineheight, @lineheightName) {
-                                    // each(@letterSpacings, .(@letterSpacing, @letterSpacingName) {
-                                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{transformation} .@{verticalAlign} .@{horizontalAlign} .@{style} .@{weight} {
-                                            font-family: @fontName;
-                                            font-size: @fontSizePx;
-                                            font-weight: @weight;
-                                            font-style: @style;
-                                            color: black;
-                                            line-height: @lineheight;
-                                            // letter-spacing: @letterSpacing;
-                                            // text-decoration: @decoration;
-                                            text-transform: @transformation;
-                                            vertical-align: @verticalAlign;
-                                            text-align: @horizontalAlign;
-                                        }
-                                    // });
-                                });
-                            });
-                        });
-                    });
-                // });
+                each(@lineheights, .(@lineheight, @lineheightName) {
+                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{style} .@{weight} {
+                            font-family: @fontName;
+                            font-size: @fontSizePx;
+                            font-weight: @weight;
+                            font-style: @style;
+                            color: black;
+                            line-height: @lineheight;
+                        }
+                });
             });
         });
     });
