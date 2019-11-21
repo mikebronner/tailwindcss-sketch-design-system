@@ -76,7 +76,7 @@ each(@families, .(@fontName, @family) {
         each(@@weights, .(@weight) {
             each(@styles, .(@style) {
                 each(@lineheights, .(@lineheight, @lineheightName) {
-                        .@{family} .@{fontSizePx}__-__@{size} .Lineheight__-__@{lineheightName} .@{style} .@{weight} {
+                        .@{family} .@{fontSizePx}__-__@{size} .@{style} .@{weight} .Lineheight__-__@{lineheightName} {
                             font-family: @fontName;
                             font-size: @fontSizePx;
                             font-weight: @weight;

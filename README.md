@@ -28,7 +28,7 @@ Items marked as blocked are not yet implemented in the style generator plugin.
   - [ ] Text Decoration (ommitted, should be set when creating symbols)
   - [ ] Text Transform (ommitted, should be set when creating symbols)
 - [X] Box Shadow
-- [ ] Opacity (blocked)
+- [X] Opacity
 - Border Styles
   - [X] Border Color
   - Border Styles
