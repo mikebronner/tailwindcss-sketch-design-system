@@ -8,9 +8,9 @@
     100,
 ;
 
-// each(@opacities, .(@opacity) {
-//     @opacityVariable: "opacity-@{opacity}";
-//     .Opacities .@{opacity} {
-//         opacity: ~"@{opacity}%";
-//     }
-// });
+each(@opacities, .(@opacity) {
+    @opacityVariable: "opacity-@{opacity}";
+    .Opacities .@{opacity} {
+        opacity: ~"@{opacity}%";
+    }
+});

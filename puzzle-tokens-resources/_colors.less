@@ -13,7 +13,7 @@
     Pink: pink;
 };
 
-@variants:
+@colorVariants:
     100,
     200,
     300,
@@ -36,7 +36,7 @@
 }
 
 each(@colors, #(@colorValue, @colorKey) {
-    each(@variants, .(@variant) {
+    each(@colorVariants, .(@variant) {
         .Colors .@{colorKey} .@{variant} {
             background-color: ~"@{colors-@{colorValue}-@{variant}}";
         }

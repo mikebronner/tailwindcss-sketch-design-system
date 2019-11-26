@@ -34,8 +34,8 @@ Items marked as blocked are not yet implemented in the style generator plugin.
   - Border Styles
     - [X] Solid
     - [X] Double
-    - [ ] Dashed (blocked)
-    - [ ] Dotted (blocked)
+    - [X] Dashed
+    - [X] Dotted
   - [X] Border Width
 - [ ] Border Radius (blocked, implemented as card symbols)
 

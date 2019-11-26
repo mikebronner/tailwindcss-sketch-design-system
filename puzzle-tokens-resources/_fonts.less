@@ -2,19 +2,7 @@
 
 @rootFontSize: 16px;
 
-@variants:
-    100,
-    200,
-    300,
-    400,
-    500,
-    600,
-    700,
-    800,
-    900
-;
-
-@sizes:
+@fontSizes:
     xs,
     sm,
     base,
@@ -27,12 +15,12 @@
     6xl
 ;
 
-@weights-mono:
+@fontWeights-mono:
     400,
     700,
 ;
 
-@weights-sans:
+@fontWeights-sans:
     100,
     200,
     400,
@@ -43,12 +31,12 @@
     900,
 ;
 
-@weights-serif:
+@fontWeights-serif:
     400,
     700,
 ;
 
-@lineheights: {
+@fontLineheights: {
     none: 1;
     tight: 1.25;
     snug: 1.375;
@@ -57,25 +45,25 @@
     loose: 2;
 };
 
-@styles:
+@fontStyles:
     italic,
     normal
 ;
 
-@families: {
+@fontFamilies: {
     sans: "SF Pro Display";
     serif: Georgia;
     mono: Menlo;
 };
 
-each(@families, .(@fontName, @family) {
-    each(@sizes, .(@size) {
+each(@fontFamilies, .(@fontName, @family) {
+    each(@fontSizes, .(@size) {
         @fontSize: "fontSize-@{size}";
         @fontSizePx: @rootFontSize * @@fontSize;
-        @weights: "weights-@{family}";
+        @weights: "fontWeights-@{family}";
         each(@@weights, .(@weight) {
-            each(@styles, .(@style) {
-                each(@lineheights, .(@lineheight, @lineheightName) {
+            each(@fontStyles, .(@style) {
+                each(@fontLineheights, .(@lineheight, @lineheightName) {
                         .@{family} .@{fontSizePx}__-__@{size} .@{style} .@{weight} .Lineheight__-__@{lineheightName} {
                             font-family: @fontName;
                             font-size: @fontSizePx;

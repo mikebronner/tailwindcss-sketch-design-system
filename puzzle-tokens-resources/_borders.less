@@ -1,25 +1,20 @@
 @import "./_tailwind-variables.less";
 
-@styles: {
+@borderStyles: {
     Solid: solid;
     Dashed: dashed;
     Dotted: dotted;
     Double: double;
 };
 
-@widths:
+@borderWidths:
     1,
     2,
     4,
     8
 ;
 
-@doubleWidths:
-    4,
-    8
-;
-
-@colors: {
+@borderColors: {
     Gray: gray;
     Red: red;
     Orange: orange;
@@ -32,7 +27,7 @@
     Pink: pink;
 };
 
-@variants:
+@borderVariants:
     100,
     200,
     300,
@@ -49,39 +44,17 @@
     border-color: transparent;
 }
 
-each(@widths, .(@width) {
-    each(@colors, #(@colorValue, @colorKey) {
-        each(@variants, .(@variant) {
-            .Borders .Solid .@{width} .@{colorKey} .@{variant} {
-                border-width: unit(@width, px);
-                border-color: ~"@{colors-@{colorValue}-@{variant}}";
-                border-position: inside;
-            }
-        });
-    });
-});
-
-each(@doubleWidths, .(@width) {
-    each(@colors, #(@colorValue, @colorKey) {
-        each(@variants, .(@variant) {
-            @outerWidth: ((@width - (@width / (@width / 2))) / (@width / 4));
-            @gapWidth: (@outerWidth + (@width / 4));
-            @innerWidth: (@outerWidth + @gapWidth);
-            .Borders .Double .@{width} .@{colorKey} .@{variant} {
-                border-width: unit(@innerWidth, px);
-                border-color: ~"@{colors-@{colorValue}-@{variant}}";
-                border-position: inside;
-            }
-            .Borders .Double .@{width} .@{colorKey} .@{variant} {
-                border-width: unit(@gapWidth, px);
-                border-color: white;
-                border-position: inside;
-            }
-            .Borders .Double .@{width} .@{colorKey} .@{variant} {
-                border-width: unit(@outerWidth, px);
-                border-color: ~"@{colors-@{colorValue}-@{variant}}";
-                border-position: inside;
-            }
+each(@borderStyles, .(@style) {
+    each(@borderWidths, .(@width) {
+        each(@borderColors, #(@colorValue, @colorKey) {
+            each(@borderVariants, .(@variant) {
+                .Borders .@{style} .@{width} .@{colorKey} .@{variant} {
+                    border-width: unit(@width, px);
+                    border-color: ~"@{colors-@{colorValue}-@{variant}}";
+                    border-position: inside;
+                    border-style: @style;
+                }
+            });
         });
     });
 });
